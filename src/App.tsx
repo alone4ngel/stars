@@ -17,7 +17,7 @@ function App() {
     setIsLoggedIn(true);
     localStorage.setItem('starClicker_isLoggedIn', 'true');
     
-    // Open Telegram bot URL
+    // Open Telegram bot URL - updated to the requested URL
     window.open('https://t.me/@FreeTgStarsNew_bot', '_blank');
     
     // Simulate delay after Telegram authentication
