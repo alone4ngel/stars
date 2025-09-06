@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@utility star-gradient {
+  background: linear-gradient(135deg, #00e1ff 0%, #ff00e6 100%);
+}
+
+@utility star-shadow {
+  filter: drop-shadow(0 0 20px rgba(0, 225, 255, 0.8));
+}
+
+@utility star-pulse {
+  animation: star-pulse 3s infinite;
+}
+
+@keyframes star-pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(0, 225, 255, 0.6));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px rgba(255, 0, 230, 0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(0, 225, 255, 0.6));
+  }
+}
+
+@keyframes star-click {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@utility star-click {
+  animation: star-click 0.2s ease-out;
+}
+
+/* Add new neon glow effect */
+@utility neon-glow {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8))
+         drop-shadow(0 0 15px rgba(0, 225, 255, 0.8))
+         drop-shadow(0 0 25px rgba(255, 0, 230, 0.6));
+}
+
+/* Fix text visibility */
+.text-on-dark {
+  color: #f8fafc;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
